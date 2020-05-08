@@ -1,0 +1,51 @@
+node_modules
+*.pyc
+/lib
+/bin
+/include
+
+.DS_STORE
+.adr-dir
+.vscode
+*.sqlite3
+*/settings/local.py
+webpack-stats.json
+assets/webpack_bundles/*
+staticfiles/*
+html_cov/
+coverage/
+test_backups/*.json
+*.tap
+*.rdb
+.pytest_cache/
+credentials*.json
+token.pickle
+
+package-lock.json
+.tags
+node_modules/
+webpack-stats.json
+staticfiles/
+
+# Django stuff
+*.log
+*.pot
+.tags
+.tags*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+bin/
+build/
+node_modules/
+develop-eggs/
+dist/
+egg
