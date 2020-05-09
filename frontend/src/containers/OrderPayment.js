@@ -1,11 +1,9 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-// import { Button, Container, Divider, Grid, Header, Icon, Segment, Placeholder} from 'semantic-ui-react'
 import { Typography, Spin } from 'antd';
 import  { orderGetDetail } from "../actions/orderpayment"
 import OrderDetail from "./OrderDetail"
 import PaymentOptions from "./paymentforms/PaymentOptions"
-import conektaHelper from './paymentforms/conektaHelper'
 const { Title } = Typography;
 
 class OrderPayment extends Component {

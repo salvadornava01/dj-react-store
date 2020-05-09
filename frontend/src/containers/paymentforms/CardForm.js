@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux"
-// import { Input, Button, Form, Message, Progress } from 'semantic-ui-react'
 import {
     Alert,
     Form,
@@ -9,9 +8,8 @@ import {
     Select,
     Progress,
     Result,
-    Tooltip 
   } from 'antd';
-import { UserOutlined, CreditCardOutlined, QuestionCircleOutlined } from '@ant-design/icons';
+import { UserOutlined, CreditCardOutlined } from '@ant-design/icons';
 import conektaHelper from './conektaHelper'
 import { orderPaymentPostDetail } from "../../actions/orderpayment"
 import { withRouter } from "react-router-dom"

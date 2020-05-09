@@ -6,7 +6,7 @@ import { fetchCart, cartDeleteItem } from "../actions/cart";
 // import { Button, Container, Header, Table } from "semantic-ui-react";
 import { List, Avatar, Button, Tooltip, Typography } from 'antd';
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
-import CheckoutProductDetail from "./CheckoutProductDetail";
+// import CheckoutProductDetail from "./CheckoutProductDetail";
 const { Title } = Typography;
 
 class CheckoutSummary extends Component {

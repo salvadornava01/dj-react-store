@@ -1,17 +1,6 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Container,
-  Dimmer,
-  Divider,
-  Icon,
-  Item,
-  Label,
-  Loader
-} from "semantic-ui-react";
 import { Card, Tag } from 'antd';
 const { Meta } = Card;
-import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom"
 
 import { connect } from "react-redux";

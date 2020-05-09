@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom"
-// import { Button, Container, Dimmer, Loader, Form, Message } from "semantic-ui-react";
-import { Alert, Form, Input, Button, Checkbox } from 'antd';
-import { Link } from "react-router-dom";
+import { Alert, Form, Input, Button } from 'antd';
 import { authLogin, authGetClientData } from "../actions/auth";
 
 class LoginForm extends Component {

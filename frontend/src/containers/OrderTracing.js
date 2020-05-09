@@ -7,8 +7,7 @@ import OrderOxxoTrace from './detailformats/OrderOxxoTrace'
 import OrderSpeiTrace from './detailformats/OrderSpeiTrace'
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { Grid, Container, Header, Table } from "semantic-ui-react";
-import { Typography, Spin } from 'antd';
+import { Typography } from 'antd';
 const { Title } = Typography;
 
 class OrderTracing extends Component {

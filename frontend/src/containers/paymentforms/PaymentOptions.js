@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import CardForm from './CardForm'
 import OxxoPayForm from './OxxoPayForm'
 import SpeiPayForm from './SpeiPayForm'
-// import { Button, Container, Divider, Grid, Header, Icon, Segment} from 'semantic-ui-react'
-import conektaHelper from './conektaHelper'
 
 
 import { Tabs } from 'antd';

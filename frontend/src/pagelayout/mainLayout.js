@@ -10,7 +10,6 @@ import CheckoutOrder from "../containers/CheckoutOrder"
 import OrderPayment from "../containers/OrderPayment"
 import OrderTracing from "../containers/OrderTracing"
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-// import { Segment } from "semantic-ui-react";
 import { Layout } from 'antd';
 const { Content } = Layout;
 import ScrollToTop from "./scrol_fun";

@@ -1,4 +1,8 @@
 module.exports = {
+    devtool: 'source-map',
+    output: {
+        publicPath: "./static/frontend/"
+    },
     module: {
         rules: [
             {
@@ -7,7 +11,11 @@ module.exports = {
                 use: {
                     loader: "babel-loader"
                 }
-            }
+            },
+            {
+                test: /\.css$/,
+                loader: 'raw-loader'
+            },
         ]
     }
 }

@@ -1,13 +1,7 @@
 import React, { Component } from "react";
 import ProductImages from "./ProductImages";
-import {
-  Label,
-  // List,
-  Rating,
-  Segment
-} from "semantic-ui-react";
 import { Avatar, Button, Divider, Layout, List, Rate, Spin, Tag, Typography } from 'antd';
-import { CreditCardOutlined, CheckOutlined, DollarOutlined } from '@ant-design/icons'
+import { CreditCardOutlined, CheckOutlined } from '@ant-design/icons'
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
 

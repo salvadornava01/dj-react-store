@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development --watch ./frontend/src/index.js --output ./frontend/static/frontend/main.js",
+    "analyze": "source-map-explorer ./frontend/static/frontend/main.*",
     "build": "webpack --mode production ./frontend/src/index.js --output ./frontend/static/frontend/main.js"
   },
   "keywords": [],
@@ -15,7 +16,10 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
+    "babel-plugin-import": "^1.13.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "raw-loader": "^4.0.1",
+    "source-map-explorer": "^2.4.2",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
@@ -31,7 +35,6 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "semantic-ui-react": "^0.88.2",
     "whatwg-fetch": "^3.0.0"
   }
 }

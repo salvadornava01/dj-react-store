@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import { Image } from "semantic-ui-react";
-import { Carousel } from 'antd';
+// import { Carousel } from 'antd';
 
 class ProductImages extends Component {
   render() {

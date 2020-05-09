@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import ProductDetail from "./ProductDetail";
-import ProductLoading from "./ProductDetailLoading";
-import { Grid } from "semantic-ui-react";
 import { Row, Col, Layout, Typography } from 'antd';
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;

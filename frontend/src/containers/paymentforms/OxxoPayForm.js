@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from "react-redux"
 import conektaHelper from './conektaHelper'
 import { orderPaymentPostDetail } from "../../actions/orderpayment"
-// import { Button, Progress } from 'semantic-ui-react'
 import {
     Button,
     Progress,

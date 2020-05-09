@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import { Header, Image, List, Segment } from "semantic-ui-react"
 import { Alert, Badge, Card, Typography } from 'antd';
 const { Title } = Typography;
 

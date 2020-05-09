@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import { Container, Grid, Header, Icon} from 'semantic-ui-react'
 import { Alert, Button, Divider, Spin } from 'antd'
 import { FacebookOutlined, CheckCircleTwoTone } from '@ant-design/icons';

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import { Button, Container, Header, Table } from "semantic-ui-react"
 import { Descriptions } from 'antd'
 
 class OrderCardTrace extends Component {
