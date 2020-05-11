@@ -5,9 +5,16 @@ import SpeiPayForm from './SpeiPayForm'
 
 
 import { Tabs } from 'antd';
-import { CreditCardOutlined , DollarOutlined, BankOutlined } from '@ant-design/icons';
+// import { CreditCardOutlined , DollarOutlined, BankOutlined } from '@ant-design/icons';
 
 const { TabPane } = Tabs;
+const iconify = (icon) => {
+    return(
+      <span style={{margin: "0 5px"}}>
+        {icon}
+      </span>
+    )
+  }
 
 class PaymentOptions extends Component {
     constructor(props){
@@ -53,7 +60,7 @@ class PaymentOptions extends Component {
                     <TabPane
                     tab={
                         <span>
-                            <CreditCardOutlined />
+                            {iconify(<i class="far fa-credit-card"></i>)}
                             Tarjeta
                         </span>
                     }
@@ -64,7 +71,7 @@ class PaymentOptions extends Component {
                     <TabPane
                     tab={
                         <span>
-                            <DollarOutlined />
+                            {iconify(<i class="far fa-money-bill-alt"></i>)}
                             Efectivo
                         </span>
                     }
@@ -75,7 +82,7 @@ class PaymentOptions extends Component {
                     <TabPane
                     tab={
                         <span>
-                            <BankOutlined />
+                            {iconify(<i class="fas fa-university"></i>)}
                             Transferencia
                         </span>
                     }

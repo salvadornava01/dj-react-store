@@ -1,7 +1,7 @@
 module.exports = {
-    devtool: 'source-map',
+    // devtool: 'source-map',
     output: {
-        publicPath: "./static/frontend/"
+        publicPath: "/static/frontend/"
     },
     module: {
         rules: [

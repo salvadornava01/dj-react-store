@@ -7,29 +7,13 @@ import { authLogin, authGetClientData } from "../actions/auth";
 class LoginForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { email: "", password: "" };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(event) {
-    const name = event.target.name;
-    this.setState({ [name]: event.target.value });
-  }
-  handleSubmit(event) {
-    this.props.authLogin(this.state.email, this.state.password);
-    this.props.authGetClientData()
-    event.preventDefault();
-    // this.props.history.push("/productos");
-  }
+  
   formSuccess = (values) => {
     this.props.authLogin(values.username, values.password);
     this.props.authGetClientData()
   }
   render() {
-    const tailLayout = {
-      wrapperCol: { offset: 8, span: 16 },
-    };
     return (
       // <Container text>
       //   {this.props.error !== null ? (

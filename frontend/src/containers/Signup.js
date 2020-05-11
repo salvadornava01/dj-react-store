@@ -10,26 +10,9 @@ import {
 } from 'antd';
 import { authSignup } from "../actions/auth";
 
-class LoginForm extends Component {
+class SignupForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", password: "" };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleChange(event) {
-    const name = event.target.name;
-    this.setState({ [name]: event.target.value });
-  }
-  handleSubmit(event) {
-    this.props.authSignup(
-      this.state.name,
-      this.state.email,
-      this.state.password
-    );
-    event.preventDefault();
-    // this.props.history.push("/productos");
   }
   
   handleFormFinish = (values) => {
@@ -39,12 +22,13 @@ class LoginForm extends Component {
       values.password,
       values.passwordconfirm,
     );
+    // this.props.history.push("/productos");
   }
   
   componentDidUpdate(){
     console.log(this.props.isAuthenticated)
     //provisionaly redirect to products, it needs to redirect to "My profile to add an adress"
-    this.props.history.push("/productos");
+    this.props.history.push("/account");
   }
 
   render() {
@@ -139,13 +123,8 @@ class LoginForm extends Component {
         <br/>
         <Form
           {...formItemLayout}
-          // form={form}
           name="register"
           onFinish={this.handleFormFinish}
-          // initialValues={{
-          //   residence: ['zhejiang', 'hangzhou', 'xihu'],
-          //   prefix: '86',
-          // }}
           scrollToFirstError
         >
           <Form.Item
@@ -227,12 +206,12 @@ class LoginForm extends Component {
             name="agreement"
             valuePropName="checked"
             rules={[
-              { validator:(_, value) => value ? Promise.resolve() : Promise.reject('Should accept agreement') },
+              { validator:(_, value) => value ? Promise.resolve() : Promise.reject('Debes aceptar los Términos y Condiciones') },
             ]}
             {...tailFormItemLayout}
           >
             <Checkbox>
-              I have read the <a href="">agreement</a>
+              He leído y acepto los <a href="#">Términos y Condiciones</a>
             </Checkbox>
           </Form.Item>
           <Form.Item {...tailFormItemLayout}>
@@ -254,4 +233,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default withRouter(connect(mapStateToProps, { authSignup })(LoginForm));
+export default withRouter(connect(mapStateToProps, { authSignup })(SignupForm));

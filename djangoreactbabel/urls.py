@@ -26,6 +26,7 @@ urlpatterns = [
     re_path(r'^order/', TemplateView.as_view(template_name='frontend/index.html')),
     re_path(r'^order-tracing/', TemplateView.as_view(template_name='frontend/index.html')),
     re_path(r'^signup', TemplateView.as_view(template_name='frontend/index.html')),
+    re_path(r'^account', TemplateView.as_view(template_name='frontend/index.html')),
     path('checkout-summary/', include('frontend.urls')),
     path('checkout-order/', include('frontend.urls')),
     path('api/products/', include('products.urls')),

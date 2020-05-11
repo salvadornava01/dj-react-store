@@ -46,31 +46,6 @@ class OrderSpeiTrace extends Component {
                             }
                     </div>
                 </Card>
-                {/* <Segment textAlign='center'>
-                Ficha Digital. No es necesario imprimir
-                <br/><br/>
-                    <Image src="https://i.ibb.co/SQ3qMDf/oxxopay-brand.png" alt="OXXOPay" size='small' centered />
-                    <Header as='h2'>{formatter.format(order_detail.total_amount)}</Header>
-                    <Header as='h3' block>
-                    CLABE: {order_detail.clabe_transf}
-                    </Header>
-                    
-                    <Segment color='blue'>
-                        Instrucciones:
-                        <span style={{textAlign:'left'}}>
-                        <List as='ol' textAlign='left'>
-                            <List.Item as='li'>Realiza una transferencia SPEI</List.Item>
-                            <List.Item as='li'>Utiliza la CLABE proporcionada en esta ficha. <strong>El banco a transferir es STP.</strong></List.Item>
-                            <List.Item as='li'><strong>Realiza la transferencia correspondiente por la cantidad exacta en esta ficha, de lo contrario se rechazará el cargo.</strong></List.Item>
-                            <List.Item as='li'>Al confirmar tu pago, el portal de tu banco generará un comprobante digital. En él podrás verificar que se haya realizado correctamente. Conserva este comprobante de pago.</List.Item>
-                        </List>
-                        <Segment color='green'>
-                        Al completar estos pasos recibirás un correo electrónico confirmando tu pago y tu pedido se enviará automáticamente.
-                        </Segment>
-                        </span>
-                    </Segment>
-                <p><strong>Status de la orden:</strong> {order_detail.status_orden}</p>
-                </Segment> */}
                 <br/>                                    
             </div>
         )

@@ -1,13 +1,22 @@
-import React, { Component } from "react";
+import React, { Component, Suspense, lazy  } from "react";
 import { withRouter } from "react-router-dom"
 import { connect } from "react-redux";
 import { logout } from "../actions/auth";
 import { cartDeleteItem } from "../actions/cart";
-import LoginModal from './LoginModal'
+// import LoginModal from './LoginModal'
+const LoginModal = lazy(() => import('./LoginModal'));
 import { Avatar, Layout, Menu, notification } from 'antd';
-import { ShoppingCartOutlined, CloseCircleOutlined, ArrowRightOutlined, UserOutlined  } from '@ant-design/icons';
+// import { UserOutlined  } from '@ant-design/icons';
 const { Header} = Layout;
 const { SubMenu } = Menu;
+
+const iconify = (icon) => {
+  return(
+    <span style={{margin: "0 5px"}}>
+      {icon}
+    </span>
+  )
+}
 
 const openNotification = (product) => {
   notification['success']({
@@ -187,7 +196,7 @@ class NavBar extends Component {
               Productos
             </Menu.Item>
             {this.props.isAuthenticated ? 
-            <SubMenu style={{float:'right'}} icon={<UserOutlined />} key="profile-info">
+            <SubMenu style={{float:'right'}} icon={iconify(<i class="far fa-user"></i>)} key="profile-info">
               <Menu.ItemGroup title="Mi Cuenta">
               <Menu.Item key="pedidos" onClick={()=>console.log('Go Configuracion')}>
                 Configuración
@@ -203,14 +212,14 @@ class NavBar extends Component {
               </Menu.Item>
             }
 
-            <SubMenu icon={<ShoppingCartOutlined />} title={cart_items_len} key="carrito">
+            <SubMenu icon={iconify(<i class="fas fa-shopping-cart"></i>)} title={cart_items_len} key="carrito">
               <Menu.ItemGroup title="Carrito">
                 {cart_array.map((cart_item, index) => {
                 return (
                   <Menu.Item
                     key={index}
                     onClick={() => this.handleDeleteCartItem(cart_item.product_id)}
-                    icon={<CloseCircleOutlined />}
+                    icon={iconify(<i class="far fa-times-circle"></i>)}
                   > 
                     <Avatar src={cart_item.product_data.image_url} />
                     {cart_item.quantity} X {cart_item.product_data.title} 
@@ -219,7 +228,7 @@ class NavBar extends Component {
               })}
               <Menu.Item
                 key="checkout-key"
-                icon={<ArrowRightOutlined />}
+                icon={iconify(<i class="fas fa-arrow-right"></i>)}
                 onClick={this.handleGoCheckout}
               >
                 Checkout
@@ -227,7 +236,9 @@ class NavBar extends Component {
               </Menu.ItemGroup>
             </SubMenu>
           </Menu>
-          <LoginModal visible={showLogin } closeModal={this.handleCloseLoginModal}/>
+          <Suspense fallback={<div></div>}>
+            <LoginModal visible={showLogin } closeModal={this.handleCloseLoginModal}/>
+          </Suspense>
         </Header>
       </Layout>
     );

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{455:function(n,e,t){"use strict";t.r(e);var u=t(0),c=t.n(u),a=t(9),i=t(323);e.default=Object(i.f)(Object(a.b)((function(n){return{isAuthenticated:null!==n.auth.token}}),null)((function(n){var e=n.isAuthenticated;return c.a.createElement("div",null,e?"Hello Account Panel":"Please Login")})))}}]);

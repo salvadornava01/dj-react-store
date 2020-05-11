@@ -53,9 +53,9 @@ class ProductDetail extends Component {
               <div>
                 Precio: {formatter.format(productItem.price) } 
                 {productItem.available ? (
-                    <Tag color="success">disponible</Tag>
+                    <Tag color="success" style={{float:"right"}} >disponible</Tag>
                   ) : (
-                    <Tag color="error">agotado</Tag>
+                    <Tag color="error" style={{float:"right"}}>agotado</Tag>
                   )}
               </div>
             } />

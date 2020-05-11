@@ -79,13 +79,20 @@ class CheckoutSummary extends Component {
           )}
           />
           <div style={{textAlign:'center'}}>
-            <Title level={4}>Subtotal: {formatter.format(cart_items_sum)}</Title>
-            <Button  htmlType="button" style={{ margin: '0 8px' }} onClick={() => this.props.history.push("/productos")}>
-              Seguir comprando
-            </Button>
-            <Button htmlType="button" type="primary" style={{ margin: '0 8px' }} onClick={() => this.props.history.push("/checkout-order")}>
-              Finalizar compra
-            </Button>
+            
+            { cart_array.length > 0 ? 
+              <div>
+                <Title level={4}>Subtotal: {formatter.format(cart_items_sum)}</Title>
+                <Button  htmlType="button" style={{ margin: '0 8px' }} onClick={() => this.props.history.push("/productos")}>
+                  Seguir comprando
+                </Button>
+                <Button htmlType="button" type="primary" style={{ margin: '0 8px' }} onClick={() => this.props.history.push("/checkout-order")}>
+                  Finalizar compra
+                </Button>
+              </div>
+            :
+              <Title level={4}>Tu carrito está vacío </Title>
+            }
           </div>
           {/* <h1>Productos en mi Carrito</h1>
           <Table celled padded>

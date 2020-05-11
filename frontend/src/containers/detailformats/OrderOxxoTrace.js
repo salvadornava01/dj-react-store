@@ -47,32 +47,6 @@ class OrderOxxoTrace extends Component {
                             }
                     </div>
                 </Card>
-                {/* <Segment textAlign='center'>
-                Ficha Digital. No es necesario imprimir
-                <br/><br/>
-                    <Image src="https://i.ibb.co/SQ3qMDf/oxxopay-brand.png" alt="OXXOPay" size='small' centered />
-                    <Header as='h2'>{formatter.format(order_detail.total_amount)}</Header>
-                    <Header as='h3' block>
-                    REF: {order_detail.oxxo_ref}
-                    </Header>
-                    
-                    <Segment color='blue'>
-                        Instrucciones:
-                        <span style={{textAlign:'left'}}>
-                        <List as='ol' textAlign='left'>
-                            <List.Item as='li'>Acude a tu tienda Oxxo más cercana</List.Item>
-                            <List.Item as='li'>Indica en caja que quieres realizar un pago de OXXOPay</List.Item>
-                            <List.Item as='li'>Dicta al cajero el número de referencia en esta ficha para que tecleé directamete en la pantalla de venta.</List.Item>
-                            <List.Item as='li'>Realiza el pago correspondiente con dinero en efectivo.</List.Item>
-                            <List.Item as='li'>Al confirmar tu pago, el cajero te entregará un comprobante impreso. <strong>En él podrás verificar que se haya realizado correctamente</strong>. Conserva este comprobante de pago.</List.Item>
-                        </List>
-                        <Segment color='green'>
-                        Al completar estos pasos recibirás un correo electrónico confirmando tu pago y tu pedido se enviará automáticamente.
-                        </Segment>
-                        </span>
-                    </Segment>
-                <p><strong>Status de la orden:</strong> {order_detail.status_orden}</p>
-                </Segment> */}
                 <br/>                                    
             </div>
         )

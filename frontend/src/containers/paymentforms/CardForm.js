@@ -9,7 +9,7 @@ import {
     Progress,
     Result,
   } from 'antd';
-import { UserOutlined, CreditCardOutlined } from '@ant-design/icons';
+// import { UserOutlined, CreditCardOutlined } from '@ant-design/icons';
 import conektaHelper from './conektaHelper'
 import { orderPaymentPostDetail } from "../../actions/orderpayment"
 import { withRouter } from "react-router-dom"
@@ -147,14 +147,14 @@ class CardForm extends Component {
                             name="name"
                             rules={[{ required: true, message: "Introduce el nombre del Tarjetahabiente" }]}
                             >
-                                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Nombre" onChange={this.handleFormChange} />
+                                <Input prefix={<i class="far fa-user"></i>} placeholder="Nombre" onChange={this.handleFormChange} />
                             </Form.Item>
                             <Form.Item
                             label="Número de la Tarjeta"
                             name="card_number"
                             rules={[{ required: true, message: "Introduce el número de la Tarjeta" }]}
                             >
-                                <Input prefix={<CreditCardOutlined className="site-form-item-icon" />} placeholder="Tarjeta" onChange={this.handleFormChange}/>
+                                <Input prefix={<i class="far fa-credit-card"></i>} placeholder="Tarjeta" onChange={this.handleFormChange}/>
                             </Form.Item>
                             <Form.Item label="Expiración" style={{ marginBottom: 0 }} required>
                                 <Form.Item

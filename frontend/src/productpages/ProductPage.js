@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ProductImages from "./ProductImages";
 import { Avatar, Button, Divider, Layout, List, Rate, Spin, Tag, Typography } from 'antd';
-import { CreditCardOutlined, CheckOutlined } from '@ant-design/icons'
-const { Header, Content, Footer } = Layout;
+// import { CreditCardOutlined, CheckOutlined } from '@ant-design/icons'
+// const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
 
 import "whatwg-fetch";
@@ -62,7 +62,7 @@ class ProductPage extends Component {
     const data = [
       {
         title: 'Paga seguro con Tarjeta, Efectivo en Oxxo o Transferencia SPEI',
-        avatar: <Avatar style={{ backgroundColor: '#87d068' }} icon={<CreditCardOutlined />} />,
+        avatar: <Avatar style={{ backgroundColor: '#87d068' }} icon={<i class="fas fa-credit-card"></i>} />,
         description: <div >
                       <img src="https://i.ibb.co/VVRX1nv/visa2.png" />
                       <img src="https://i.ibb.co/L5H68Cr/mastercardpay.png" alt="" />
@@ -72,7 +72,7 @@ class ProductPage extends Component {
       },
       {
         title: 'Envío gratis',
-        avatar: <Avatar style={{ backgroundColor: '#87d068' }} icon={<CheckOutlined />} />,
+        avatar: <Avatar style={{ backgroundColor: '#87d068' }} icon={<i class="fas fa-shipping-fast"></i>} />,
         description: "Te llega gratis a tu domicilio entre 5 y  10 días hábiles"
       },
     ];

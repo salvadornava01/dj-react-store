@@ -15,31 +15,6 @@ class OrderCardTrace extends Component {
                     <Descriptions.Item label="Status de la orden">{order_detail.status_orden}</Descriptions.Item>
                     <Descriptions.Item label="ID de Pago">{order_detail.payment_order_id}</Descriptions.Item>
                     </Descriptions>
-                {/* <Table singleLine>
-                    <Table.Header>
-                        <Table.Row>
-                            <Table.HeaderCell colSpan='2' textAlign="center">Detalle de Pago</Table.HeaderCell>
-                        </Table.Row>
-                    </Table.Header>
-                    <Table.Body>
-                        <Table.Row>
-                            <Table.Cell>
-                                Status de la orden:
-                            </Table.Cell>
-                            <Table.Cell>
-                            {order_detail.status_orden}
-                            </Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell>
-                                Id de Pago:
-                            </Table.Cell>
-                            <Table.Cell>
-                            {order_detail.payment_order_id}
-                            </Table.Cell>
-                        </Table.Row>
-                    </Table.Body>
-                </Table>     */}
                 <br/>                                    
             </div>
         )
