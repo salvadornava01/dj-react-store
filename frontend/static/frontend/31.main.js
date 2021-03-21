@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[19],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[31],{
 
 /***/ "./frontend/src/containers/CheckoutSummary.js":
 /*!****************************************************!*\

@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[15],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[24],{
 
 /***/ "./node_modules/@ant-design/icons-svg/lib/asn/StarFilled.js":
 /*!******************************************************************!*\

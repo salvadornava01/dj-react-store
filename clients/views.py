@@ -158,3 +158,73 @@ class PaymentOrder(APIView):
                 'payment_method'
             ])
             return Response(conekta_order.id, status=HTTP_200_OK)
+
+# Account Dashboard
+class AccountData(APIView):
+    def get(self, request, *args, **kwargs):
+        token = request.query_params.get('token', None)
+        user_token = get_object_or_404(Token, key=token)
+        actual_user = user_token.user
+        try:
+            actual_client = Client.objects.get(user = actual_user)
+            actual_adress = Adress.objects.get(client=actual_client, default_adress=True) 
+            all_orders = Order.objects.filter(client=actual_client)
+            client_serializer = ClientSerializer(actual_client)
+            adress_serialzier = AdressSerializer(actual_adress)
+            #Get all the orders related to the user
+            order_serializer = OrderSerializer(all_orders, many=True)
+            resp = {
+                'client_data':client_serializer.data,
+                'address_data':adress_serialzier.data,
+                'all_orders':order_serializer.data
+                }
+            return Response(resp, status=HTTP_200_OK)
+        except:
+            resp = {
+                'message':['Es necesario que registres tus datos de contacto y dirección de envío para completar tu perfil y puedas realizar tus órdenes']
+                }
+            return Response(resp, status=HTTP_400_BAD_REQUEST)
+
+    def post(self, request, *args, **kwargs):
+        if 'token' not in request.data:
+            resp = {
+                'message':['Debes iniciar sesión para realizar esta acción']
+                }
+            return Response(resp, status=HTTP_400_BAD_REQUEST)
+        
+        token = request.data['token']
+        user_token = get_object_or_404(Token, key=token)
+        actual_user = user_token.user
+        model_to_save = request.data['model_to_save'] # model_to_save can be client or address 
+        if model_to_save == 'client_data':
+            # Check if a client asociated with this user already exists
+            # Create a client instance and save it to de db
+            client_data = request.data['client_data']
+            new_client = Client.objects.create(
+                user = actual_user,
+                name = client_data['nombrecomp'],
+                phone = client_data['telefono'],
+                email = client_data['email']
+            )
+            resp = {
+                'message':['Se han guardado tus datos con éxito!']
+                }
+            return Response(resp, status=HTTP_200_OK)
+        elif model_to_save == 'address_data':
+            print('address_data')
+            print(request.data['address_data'])
+            # Create an adress instance and save it to de db
+            actual_client = Client.objects.get(user = actual_user)
+            new_adress = Adress.objects.create(
+                client = actual_client,
+                calle = client_data['calle'],
+                colonia = client_data['colonia'],
+                ciudad = client_data['ciudad'],
+                estado = client_data['estado'],
+                cp = client_data['cp']
+            )
+            resp = {
+                'message':['Se ha guardado tu dirección con éxito!']
+                }
+            return Response(resp, status=HTTP_400_BAD_REQUEST)
+        return Response(status=HTTP_200_OK)

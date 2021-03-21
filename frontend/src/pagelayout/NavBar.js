@@ -81,7 +81,6 @@ class NavBar extends Component {
     } 
   }
   componentWillMount(){
-    console.log('kiii mount')
     if(this.props.isAuthenticated){
       this.setState({
         showLogin:false
@@ -198,7 +197,7 @@ class NavBar extends Component {
             {this.props.isAuthenticated ? 
             <SubMenu style={{float:'right'}} icon={iconify(<i class="far fa-user"></i>)} key="profile-info">
               <Menu.ItemGroup title="Mi Cuenta">
-              <Menu.Item key="pedidos" onClick={()=>console.log('Go Configuracion')}>
+              <Menu.Item key="pedidos" onClick={()=> this.props.history.push("/account") }>
                 Configuración
               </Menu.Item>
               <Menu.Item key="Logout" onClick={this.props.logout}>

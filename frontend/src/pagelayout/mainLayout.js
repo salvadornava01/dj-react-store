@@ -19,7 +19,7 @@ const OrderPayment = lazy(() => import('../containers/OrderPayment'));
 // import OrderTracing from "../containers/OrderTracing"
 const OrderTracing = lazy(() => import('../containers/OrderTracing'));
 
-const AccountPanel = lazy(() => import('../accounts/Account'))
+const AccountPanel = lazy(() => import('../accounts/AccountPanel'))
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Layout } from 'antd';
