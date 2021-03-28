@@ -1,5 +1,5 @@
-import React from 'react'
-import LoginForm from '../containers/Login'
+import React from 'react';
+import LoginForm from '../containers/Login';
 import { Modal } from 'antd';
 
 function LoginModal(props) {
@@ -15,7 +15,7 @@ function LoginModal(props) {
             <LoginForm />
             </Modal>
         </div>
-    )
+    );
 }
 
-export default LoginModal
+export default LoginModal;

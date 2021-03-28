@@ -1,25 +1,25 @@
 import React, { Component, Suspense, lazy } from "react";
 import HomePage from "../containers/HomePage";
 import NavBar from "./NavBar";
-// const NavBar = lazy(() => import('./NavBar'));
-// import ProductListCard from "../containers/ProductListCard";
+//const NavBar = lazy(() => import('./NavBar'));
+//import ProductListCard from "../containers/ProductListCard";
 const ProductListCard = lazy(() => import('../containers/ProductListCard'));
-// import ProductPage from "../productpages/ProductPage";
+//import ProductPage from "../productpages/ProductPage";
 const ProductPage = lazy(() => import('../productpages/ProductPage'));
-// import Login from "../containers/Login";
+//import Login from "../containers/Login";
 const Login = lazy(() => import('../containers/Login'));
-// import Signup from "../containers/Signup";
+//import Signup from "../containers/Signup";
 const Signup = lazy(() => import('../containers/Signup'));
-// import CheckoutSummary from "../containers/CheckoutSummary";
+//import CheckoutSummary from "../containers/CheckoutSummary";
 const CheckoutSummary = lazy(() => import('../containers/CheckoutSummary'));
-// import CheckoutOrder from "../containers/CheckoutOrder"
+//import CheckoutOrder from "../containers/CheckoutOrder"
 const CheckoutOrder = lazy(() => import('../containers/CheckoutOrder'));
-// import OrderPayment from "../containers/OrderPayment"
+//import OrderPayment from "../containers/OrderPayment"
 const OrderPayment = lazy(() => import('../containers/OrderPayment'));
-// import OrderTracing from "../containers/OrderTracing"
+//import OrderTracing from "../containers/OrderTracing"
 const OrderTracing = lazy(() => import('../containers/OrderTracing'));
 
-const AccountPanel = lazy(() => import('../accounts/AccountPanel'))
+const AccountPanel = lazy(() => import('../accounts/AccountPanel'));
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Layout } from 'antd';
@@ -32,7 +32,7 @@ const LoadingScreen = <div id="loading-page" style={{paddingTop: "30%"}}>
                                 <span className="ant-spin-dot ant-spin-dot-spin"><i className="ant-spin-dot-item"></i><i className="ant-spin-dot-item"></i><i className="ant-spin-dot-item"></i><i className="ant-spin-dot-item"></i></span>
                             </div>
                         </div>
-                      </div>
+                      </div>;
 
 class MainLayout extends Component {
   render() {
